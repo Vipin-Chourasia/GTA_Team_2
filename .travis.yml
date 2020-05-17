@@ -10,6 +10,5 @@ install:
 
 script:
   - echo "Reached Script Section"
-  - gcc   	SourceCode/main.c  -o output
-  - ./output
-  - ./output
+  - gcc  SourceCode/main.c  SourceCode/Calculator.c -o Calculator
+  - ./Calculator
