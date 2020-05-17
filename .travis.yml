@@ -30,5 +30,5 @@ script:
   - ls
   #- cd $HOME/local
   - echo "Reached Script Section - Unit_Test"
-  - gcc  -I$HOME/local/include Unit_Test.c -L$HOME/local/lib -lcunit ./mylibrary.so  -o Unit_Test
+  - gcc  -I$HOME/local/include Unit_Test.c -L$HOME/local/lib -lcunit ./Unit_Test.so  -o Unit_Test
   - ./Unit_Test
