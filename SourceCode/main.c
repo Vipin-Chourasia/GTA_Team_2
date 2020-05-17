@@ -1,14 +1,6 @@
-#include "hello.h"
+#include "Calculator.c"
 #include <stdio.h>
-int add(int a, int b)
-{
-  return (a+b)
-}
 
-int subtract(int a, int b)
-{
-  return (a+b)
-}
 int main()
 {
 	int c,d;
