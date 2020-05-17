@@ -1,6 +1,6 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
-#include "Calculator.h"
+#include <SourceCode/Calculator.h>
 
 int maxi(int i1, int i2)
 {
