@@ -9,15 +9,17 @@ before_install:
   - wget http://downloads.sourceforge.net/project/cunit/CUnit/2.1-2/CUnit-2.1-2-src.tar.bz2
   - tar -xvjpf CUnit-2.1-2-src.tar.bz2
   - cd CUnit-2.1-2
-  - ./configure --prefix=$TRAVIS_BUILD_DIR
+  - mkdir -p $HOME/local
+  - ./configure –prefix=$HOME/local
+  - make clean
   - make
   - make install
-  - export C_INCLUDE_PATH=$TRAVIS_BUILD_DIR/include:$C_INCLUDE_PATH
-  - export LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LIBRARY_PATH
-  - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
+  #- export C_INCLUDE_PATH=$TRAVIS_BUILD_DIR/include:$C_INCLUDE_PATH
+  #- export LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LIBRARY_PATH
+  #- export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
   #Come back to the repo unwarpped folder
-  - cd ..
-  - cd c
+  #- cd ..
+  #- cd c
   
 install:
   - echo  "Reached Install Section"
@@ -27,5 +29,5 @@ script:
   - gcc  SourceCode/main.c  SourceCode/Calculator.c -o Calculator
   - ./Calculator
   - echo "Reached Script Section - Unit_Test"
-  - gcc   	Unit_Test.c -o Unit_Test
+  - gcc  -I$HOME/local/include Unit_Test.c -L$HOME/local/lib -lcunit ./mylibrary.so  -o Unit_Test
   - ./Unit_Test
