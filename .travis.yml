@@ -17,7 +17,7 @@ before_install:
   - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
   #Come back to the repo unwarpped folder
   - cd ..
-  - cd c
+  #- cd c
   
 install:
   - echo  "Reached Install Section"
