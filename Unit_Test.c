@@ -23,13 +23,13 @@ void test_subtract(void)
 }
 int main() {
     CU_initialize_registry();
-    CU_pSuite suite = CU_add_suite("maxi_test", 0, 0);
-    CU_pSuite suite = CU_add_suite("add_test", 0, 0);
-    CU_pSuite suite = CU_add_suite("subtract_test", 0, 0);
+    CU_pSuite suite_maxi = CU_add_suite("maxi_test", 0, 0);
+    CU_pSuite suite_add = CU_add_suite("add_test", 0, 0);
+    CU_pSuite suite_subtract = CU_add_suite("subtract_test", 0, 0);
 
-    CU_add_test(suite, "maxi_fun", test_maxi);
-    CU_add_test(suite, "add_fun", test_add);
-    CU_add_test(suite, "subtract_fun", test_subtract);
+    CU_add_test(suite_maxi, "maxi_fun", test_maxi);
+    CU_add_test(suite_add, "add_fun", test_add);
+    CU_add_test(suite_subtract, "subtract_fun", test_subtract);
 
     CU_basic_set_mode(CU_BRM_VERBOSE);
     CU_basic_run_tests();
