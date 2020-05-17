@@ -1,5 +1,6 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
+#include "Calculator.h"
 
 int maxi(int i1, int i2)
 {
@@ -9,6 +10,8 @@ int maxi(int i1, int i2)
 void test_maxi(void)
 {
     CU_ASSERT(maxi(0,2) == 2);
+    CU_ASSERT(add(1,2) == 3);
+    CU_ASSERT(subtract(1,2) == -1);
 }
 
 int main() {
