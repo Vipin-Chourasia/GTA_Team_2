@@ -1,4 +1,4 @@
-#include "Calculator.c"
+#include "Calculator.h"
 #include <stdio.h>
 
 int main()
