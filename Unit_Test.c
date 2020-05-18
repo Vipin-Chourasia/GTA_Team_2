@@ -38,7 +38,7 @@ int main() {
     }
 
     // add test_maxi to suite_maxi
-    if ((NULL == CCU_add_test(suite_maxi, "maxi_fun", test_maxi)))
+    if ((NULL == CU_add_test(suite_maxi, "maxi_fun", test_maxi)))
     {
       CU_cleanup_registry();
       return CU_get_error();
